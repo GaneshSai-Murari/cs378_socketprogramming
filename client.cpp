@@ -20,6 +20,10 @@ int main() {
 
     cout << "Sent: " << msg << endl;
 
+    char buffer[100] = {0};
+    recv(sockfd, buffer, sizeof(buffer), 0);
+    cout<< "Received mssg from server : " <<buffer<<endl; 
+
     close(sockfd);
 
     return 0;

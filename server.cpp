@@ -30,6 +30,10 @@ int main() {
 
     cout << "Received: " << buffer << endl;
 
+    // Reply for the recieved message
+    string reply = "Welcome";
+    send(new_fd, reply.c_str(), reply.length(), 0);
+
     close(new_fd);
     close(sockfd);
 
